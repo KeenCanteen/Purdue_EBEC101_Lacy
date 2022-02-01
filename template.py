@@ -1,20 +1,20 @@
 """
-Author: Your Name, lacyw@purdue.edu
-Assignment: 00.1 - Hello User
-Date: 01/31/2022
+Author: Your Name, login@purdue.edu
+Assignment: mm.n - Assignment Name
+Date: MM/DD/YYYY
 
 Description:
-    A basic greeting that says hello and repeats the inputted string back to the user.
+    Describe your program here.
 
 Contributors:
-    Name, lacyw@purdue.edu 
+    Name, login@purdue.edu [repeat for each]
 
 My contributor(s) helped me:
-    [N/A] understand the assignment expectations without
+    [ ] understand the assignment expectations without
         telling me how they will approach it.
-    [N/A] understand different ways to think about a solution
+    [ ] understand different ways to think about a solution
         without helping me plan my solution.
-    [N/A] think through the meaning of a specific error or
+    [ ] think through the meaning of a specific error or
         bug present in my code without looking at my code.
     Note that if you helped somebody else with their code, you
     have to list that person as a contributor.
@@ -31,12 +31,11 @@ Academic Integrity Statement:
 
 """Write new functions below this line (starting with unit 4)."""
 
-#The main function
+
 def main():
-	#Prompt user for input
-	name = input('What is your name? ');
-	#Say hello
-	print('Hello ', name, '!', sep='')
-	
+    """Write your mainline logic below this line (then delete this line)."""
+
+
+"""Do not change anything below this line."""
 if __name__ == "__main__":
     main()
