@@ -1,13 +1,13 @@
 """
-Author: Your Name, login@purdue.edu
-Assignment: mm.n - Assignment Name
-Date: MM/DD/YYYY
+Author: William Rhodes Lacy, lacyw@purdue.edu
+Assignment: 01.3 - cookie_recipe
+Date: 02/07/2022
 
 Description:
-    Describe your program here.
+    Given a user's requested amount of cookies, this program calculates the required amounts of ingredients to make that many cookies
 
 Contributors:
-    Name, login@purdue.edu [repeat for each]
+    William Rhodes Lacy, lacyw@purdue.edu
 
 My contributor(s) helped me:
     [ ] understand the assignment expectations without
@@ -33,7 +33,19 @@ Academic Integrity Statement:
 
 
 def main():
-    """Write your mainline logic below this line (then delete this line)."""
+    #Inputs - prompt user for specific, floating point inputs
+	num = int(input("How many cookies do you want to make? "));
+	
+	#Calculations - calculate ingredients required
+	butter = num * 1.25 / 48;
+	sugar = num * 1.5 / 48;
+	flour = num * 2.5 / 48;
+	
+	#Output: output the ingredient list
+	print("To make {:,d} cookies, you will need:".format(num));
+	print("  {:>10,.2f} cups of butter".format(butter));
+	print("  {:>10,.2f} cups of sugar".format(sugar));
+	print("  {:>10,.2f} cups of flour".format(flour));
 
 
 """Do not change anything below this line."""
