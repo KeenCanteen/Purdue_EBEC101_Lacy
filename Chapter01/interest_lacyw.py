@@ -33,13 +33,13 @@ Academic Integrity Statement:
 
 def main():
 	#Prompt user with data format
-	print("Enter each of the following parameters.");
+	print("Enter the following parameters.");
 	
 	#Inputs - prompt user for specific, floating point inputs
 	P = float(input("  The initial deposit? "));
 	r = float(input("  The annual interest rate in percent? "));
 	t = float(input("  The number of years the account earn interest? "));
-	n = float(input("  The number of times the interest is compounded each year: "));
+	n = float(input("  The number of times interest is compounded each year: "));
 	
 	#Calculations - calculate the account balance
 	r = r / 100;

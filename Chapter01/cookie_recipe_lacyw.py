@@ -1,6 +1,6 @@
 """
 Author: William Rhodes Lacy, lacyw@purdue.edu
-Assignment: 01.3 - cookie_recipe
+Assignment: 01.3 - Cookie Recipe
 Date: 02/07/2022
 
 Description:
@@ -43,9 +43,9 @@ def main():
 	
 	#Output: output the ingredient list
 	print("To make {:,d} cookies, you will need:".format(num));
-	print("  {:>10,.2f} cups of butter".format(butter));
-	print("  {:>10,.2f} cups of sugar".format(sugar));
-	print("  {:>10,.2f} cups of flour".format(flour));
+	print("{:>10,.2f} cups of butter".format(butter));
+	print("{:>10,.2f} cups of sugar".format(sugar));
+	print("{:>10,.2f} cups of flour".format(flour));
 
 
 """Do not change anything below this line."""
