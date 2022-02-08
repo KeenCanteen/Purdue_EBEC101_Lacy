@@ -1,13 +1,13 @@
 """
-Author: Your Name, login@purdue.edu
-Assignment: mm.n - Assignment Name
-Date: MM/DD/YYYY
+Author: William Rhodes Lacy, lacyw@purdue.edu
+Assignment: 01.2 - interest
+Date: 02/07/2022
 
 Description:
-    Describe your program here.
+    Calculates the account balance of a bank account at a specific time for a given interest rate and compounding period. Prompts user for floating point input
 
 Contributors:
-    Name, login@purdue.edu [repeat for each]
+    William Rhodes Lacy, lacyw@purdue.edu
 
 My contributor(s) helped me:
     [ ] understand the assignment expectations without
@@ -31,9 +31,22 @@ Academic Integrity Statement:
 
 """Write new functions below this line (starting with unit 4)."""
 
-
 def main():
-    """Write your mainline logic below this line (then delete this line)."""
+	#Prompt user with data format
+	print("Enter each of the following parameters.");
+	
+	#Inputs - prompt user for specific, floating point inputs
+	P = float(input("  The initial deposit? "));
+	r = float(input("  The annual interest rate in percent? "));
+	t = float(input("  The number of years the account earn interest? "));
+	n = float(input("  The number of times the interest is compounded each year: "));
+	
+	#Calculations - calculate the account balance
+	r = r / 100;
+	balance = P * pow((1 + r/n), (n * t));
+	
+	#Output - output the results
+	print("The balance of this account will be ${:,.2f} after {:.1f} years.".format(balance, t));
 
 
 """Do not change anything below this line."""

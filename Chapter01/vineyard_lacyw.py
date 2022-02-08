@@ -4,7 +4,7 @@ Assignment: 01.1 - vineyard
 Date: 02/07/2022
 
 Description:
-    Describe your program here.
+    Calculates the number of vines capable of being planted in a given plot given end lengths, spacings, and length of row
 
 Contributors:
     William Rhodes Lacy, lacyw@purdue.edu
@@ -33,13 +33,18 @@ Academic Integrity Statement:
 
 
 def main():
+	#Prompt user with data format
 	print("Enter each of the following quantities in meters.");
-	end_width = float(input("How wide is the end-post assembly? "));
-	space = float(input("How much space should be between the vines? "));
-	length = float(input("How long is this row? "));
 	
+	#Inputs - prompt user for specific, floating point inputs
+	end_width = float(input("  How wide is the end-post assembly? "));
+	space = float(input("  How much space should be between the vines? "));
+	length = float(input("  How long is this row? "));
+	
+	#Calculations - calculate the number of vines plantable
 	vines = int((length - 2 * end_width) / space);
 	
+	#Output - output the results
 	print("\nThere is enough space for {:.0f} vine(s) in this row.".format(vines));
 
 
