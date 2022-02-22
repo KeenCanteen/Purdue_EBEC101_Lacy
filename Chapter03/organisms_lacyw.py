@@ -1,10 +1,10 @@
 """
 Author: William Rhodes Lacy, lacyw@purdue.edu
-Assignment: 03.2 - Sum Average
+Assignment: 03.4- Organisms
 Date: 02/21/2022
 
 Description:
-    This program receives some number of inputs and tells the user their sum and average as well as the number of numbers input
+    This program predicts exponential growth in organisms based on user inputs of initial population, growth rate, and number of days
 
 Contributors:
     William Rhodes Lacy, lacyw@purdue.edu
@@ -34,35 +34,20 @@ Academic Integrity Statement:
 
 def main():
 	
-	#Initialize some variables
-	nums = [];
-	numnums = 0;
-	inNum = 0;
-	sum = 0;
+	#Prompt user for input values
+	start = float(input("Starting population, in thousands: "));
+	rate = float(input("Average daily increase, in percent: "));
+	days = int(input("Number of days to multiply: "));
 	
-	#Prompt user until they tell us to stop
-	while inNum >= 0:
-		inNum = float(input("Enter a non-negative number (negative to quit): "));
-		#Break statment to correct and off-by-one error
-		if(inNum < 0):
-			break;
-		nums = [nums, inNum];
-		numnums += 1;
-		sum += inNum;
+	#initialize population
+	pop = start;
 	
-	
-	
-	#Conditional for if the user input no numbers
-	if(numnums == 0):
-		print("  You didn't enter any numbers.");
-	else:
-		#Compute Average
-		avg = sum / numnums;
-		print("  You entered {:.0f} numbers.".format(numnums));
-		print("  Their sum is {:.3f} and their average is {:.3f}.".format(sum, avg));
-	
-
-
+	#Header
+	print("Day   Approx. Pop");
+	#Loop through days
+	for i in range(days + 1):
+		print("{:>3.0f}  {:>12,.3f}".format(i, pop))
+		pop *= 1 + rate / 100;
 
 """Do not change anything below this line."""
 if __name__ == "__main__":

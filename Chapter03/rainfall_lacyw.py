@@ -34,33 +34,38 @@ Academic Integrity Statement:
 
 def main():
 
-	years = 0;
+	#Prompt user for number of years
+	years = int(input("Enter the number of years: "));
 	
-	
-	while years <= 0:
-		years = int(input("Enter the number of years: "));
-		if years <= 0:
-			print("Invalid input; years must be greater than 0.");
+	#If not a valid number of years, exit out, otherwise continue
+	if years <= 0:
+		print("Invalid input; years must be greater than 0.");
+		
+	else:
+		sum = 0;
+		months = 12 * years;
+		cal = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
+		
+		#For each year in the given range print the year number then run through the months
+		for year in range(1, years+1):
+			print("  For year No. {}".format(year));
 			
-	sum = 0;
-	months = 12 * years;
-	cal = ["Jan.", "Feb.", "Mar.", "Apr.", "May.", "Jun.", "Jul.", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."];
-	
-	for year in range(1, years+1):
-		print("  For year No. {}".format(year));
-		for month in cal:
-			moData = -1;
-			while moData < 0:
-				moData = float(input("    Enter the rainfall for " + month + ": "));
-				if moData <0:
-					print("    Invalid input; rainfall cannot be negative.");
-			sum += moData
-	
-	avg = sum / months;
-	
-	print("There are {} months.".format(months));
-	print("The total rainfall was {:.2f} inches.".format(sum));
-	print("The monthly average rainfall was {:.2f} inches.".format(avg));
+			#For each month in the calendar ask for data until valid data read then add to sum
+			for month in cal:
+				moData = -1;
+				while moData < 0:
+					moData = float(input("    Enter the rainfall for " + month + ": "));
+					if moData <0:
+						print("    Invalid input; rainfall cannot be negative.");
+				
+				sum += moData
+		
+		avg = sum / months;
+		
+		#Output prints
+		print("There are {} months.".format(months));
+		print("The total rainfall was {:.2f} inches.".format(sum));
+		print("The monthly average rainfall was {:.2f} inches.".format(avg));
 
 """Do not change anything below this line."""
 if __name__ == "__main__":
